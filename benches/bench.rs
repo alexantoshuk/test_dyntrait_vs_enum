@@ -35,7 +35,7 @@ fn criterion_benchmark(c: &mut Criterion) {
 
     let eval_fn = eval2(&ast);
     std::mem::drop(ast);
-    c.bench_function("eval2", |b| b.iter(|| eval_fn()));
+    c.bench_function("eval fn", |b| b.iter(|| eval_fn()));
 }
 
 criterion_group!(benches, criterion_benchmark);
